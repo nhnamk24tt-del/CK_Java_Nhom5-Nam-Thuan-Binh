@@ -1,0 +1,17 @@
+:root{--bg:#f7f9fb;--card:#fff;--accent:#1d4ed8}
+body{font-family:Arial,Helvetica,sans-serif;background:var(--bg);margin:0}
+.admin-header{background:#fff;padding:12px 20px;border-bottom:1px solid #e6e9ef}
+.admin-header h1{margin:0;font-size:18px}
+.container{padding:20px}
+#messagesTable{width:100%;border-collapse:collapse;background:var(--card);box-shadow:0 1px 2px rgba(0,0,0,0.05)}
+#messagesTable th,#messagesTable td{padding:12px;border-bottom:1px solid #f1f3f6;text-align:left}
+#messagesTable th{background:#fafafa}
+.actions button{margin-right:6px}
+.modal{position:fixed;left:0;top:0;width:100%;height:100%;display:flex;align-items:center;justify-content:center;background:rgba(0,0,0,0.4)}
+.modal.hidden{display:none}
+.modal-content{width:720px;background:#fff;padding:20px;border-radius:8px;box-shadow:0 8px 30px rgba(0,0,0,0.12)}
+.close{float:right;background:transparent;border:0;font-size:22px}
+.reply-box textarea{width:100%;height:120px;margin-top:12px;padding:10px}
+.reply-actions{display:flex;justify-content:flex-end;margin-top:8px}
+.reply-actions button{margin-left:8px;padding:8px 12px;background:var(--accent);color:#fff;border:none;border-radius:4px}
+.reply-actions button.secondary{background:#6b7280}
