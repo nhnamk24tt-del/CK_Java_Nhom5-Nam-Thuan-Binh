@@ -1,0 +1,376 @@
+:root {
+  --rw-ink: #152238;
+  --rw-muted: #64748b;
+  --rw-blue: #1769ff;
+  --rw-surface: #ffffff;
+  --rw-background: #f4f7fb;
+}
+
+html {
+  background: var(--rw-background);
+  font-family: Inter, system-ui, sans-serif;
+}
+
+body {
+  color: var(--rw-ink);
+  margin: 0;
+}
+
+vaadin-app-layout::part(navbar) {
+  background: var(--rw-surface);
+  border-bottom: 1px solid #e8edf4;
+  padding-inline: 1rem;
+}
+
+vaadin-app-layout::part(drawer) {
+  background: #fff;
+}
+
+.brand {
+  color: var(--rw-blue);
+  font-size: 1.35rem;
+  font-weight: 800;
+  margin: 0;
+}
+
+.user-greeting {
+  color: var(--rw-muted);
+  font-size: .9rem;
+}
+
+.page {
+  box-sizing: border-box;
+  margin: 0 auto;
+  max-width: 1240px;
+  padding: 2rem 1.5rem 3rem;
+  width: 100%;
+}
+
+.hero {
+  align-items: flex-start;
+  background: linear-gradient(120deg, #082f68, #1769ff 70%, #4ca7ff);
+  border-radius: 24px;
+  color: white;
+  gap: 1rem;
+  padding: clamp(2rem, 6vw, 5rem);
+}
+
+.hero h1, .hero p {
+  color: white;
+}
+
+.section-title {
+  margin: 2rem 0 .5rem;
+}
+
+.vehicle-grid {
+  display: grid;
+  gap: 1.25rem;
+  grid-template-columns: repeat(auto-fit, minmax(245px, 1fr));
+  width: 100%;
+}
+
+.vehicle-card, .surface-card, .metric-card {
+  background: var(--rw-surface);
+  border: 1px solid #e5eaf1;
+  border-radius: 16px;
+  box-shadow: 0 8px 24px #1522380a;
+  box-sizing: border-box;
+  padding: 1rem;
+}
+
+.vehicle-image {
+  aspect-ratio: 16 / 10;
+  background: #e8eef7;
+  border-radius: 12px;
+  object-fit: cover;
+  width: 100%;
+}
+
+.vehicle-card h3 {
+  margin-bottom: .25rem;
+}
+
+.muted {
+  color: var(--rw-muted);
+}
+
+.form-card {
+  background: white;
+  border: 1px solid #e5eaf1;
+  border-radius: 18px;
+  margin: 2rem auto;
+  max-width: 660px;
+  padding: 2rem;
+  width: 100%;
+}
+
+.table-wrap {
+  background: white;
+  border: 1px solid #e5eaf1;
+  border-radius: 14px;
+  overflow: auto;
+  padding: 1rem;
+  width: 100%;
+}
+
+.metrics {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  width: 100%;
+}
+
+.metric-card strong {
+  color: var(--rw-blue);
+  display: block;
+  font-size: 1.7rem;
+  margin-top: .45rem;
+}
+
+.admin-dashboard {
+  max-width: 1480px;
+}
+
+.admin-car-editor {
+  background: #fff;
+  border: 1px solid #e5eaf1;
+  border-radius: 16px;
+  box-shadow: 0 8px 24px #1522380a;
+  overflow: hidden;
+}
+
+.admin-car-editor::part(summary) {
+  color: var(--rw-ink);
+  font-size: 1rem;
+  font-weight: 700;
+  padding: 1.1rem 1.25rem;
+}
+
+.admin-car-form {
+  border: 0;
+  border-radius: 0;
+  box-shadow: none;
+  margin: 0;
+}
+
+.admin-car-form h2 {
+  margin: .25rem 0 0;
+}
+
+.admin-list-header {
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+.admin-list-header h2 {
+  margin: 0;
+  white-space: nowrap;
+}
+
+.admin-data-grid {
+  border: 1px solid #e5eaf1;
+  border-radius: 14px;
+  overflow: hidden;
+}
+
+.booking-actions {
+  gap: .25rem;
+}
+
+.booking-actions vaadin-button {
+  margin: 0;
+}
+
+.admin-car-thumb {
+  border-radius: 10px;
+  height: 54px;
+  object-fit: cover;
+  width: 76px;
+}
+
+.admin-car-name span:first-child {
+  color: var(--rw-ink);
+  font-weight: 700;
+}
+
+.admin-car-name span:last-child,
+.admin-car-inventory span:last-child {
+  color: var(--rw-muted);
+  font-size: .82rem;
+}
+
+.admin-car-inventory span:first-child {
+  color: var(--rw-ink);
+  font-weight: 700;
+}
+
+.admin-status-badge {
+  border-radius: 999px;
+  display: inline-flex;
+  font-size: .78rem;
+  font-weight: 700;
+  line-height: 1;
+  padding: .48rem .7rem;
+  white-space: nowrap;
+}
+
+.admin-status-badge.is-available,
+.admin-status-badge.is-success {
+  background: #e7f8ef;
+  color: #147a43;
+}
+
+.admin-status-badge.is-unavailable,
+.admin-status-badge.is-danger {
+  background: #feeeee;
+  color: #b42318;
+}
+
+.admin-status-badge.is-pending {
+  background: #fff5df;
+  color: #986400;
+}
+
+.admin-status-badge.is-neutral {
+  background: #edf2f7;
+  color: #475569;
+}
+
+.metrics {
+  align-items: stretch;
+}
+
+.metrics .metric-card {
+  min-width: 0;
+}
+
+.metrics .metric-card span:first-child {
+  color: var(--rw-muted);
+  font-size: .88rem;
+}
+
+.metrics .metric-card span:last-child {
+  color: var(--rw-blue);
+  overflow-wrap: anywhere;
+}
+
+.admin-chart {
+  background: #fff;
+  border: 1px solid #e5eaf1;
+  border-radius: 16px;
+  box-shadow: 0 8px 24px #1522380a;
+  box-sizing: border-box;
+  margin-top: 1rem;
+  padding: 1.25rem;
+  width: 100%;
+}
+
+.admin-chart h3 {
+  margin: 0 0 .25rem;
+}
+
+.admin-chart > p {
+  color: var(--rw-muted);
+  margin: 0 0 1rem;
+}
+
+.admin-chart-drawing {
+  min-width: 0;
+  overflow-x: auto;
+  width: 100%;
+}
+
+.admin-chart-svg {
+  display: block;
+  height: auto;
+  max-height: 380px;
+  min-width: 680px;
+  overflow: visible;
+  width: 100%;
+}
+
+.chart-grid {
+  stroke: #e8edf4;
+  stroke-width: 1;
+}
+
+.chart-axis {
+  fill: #64748b;
+  font-family: Inter, system-ui, sans-serif;
+  font-size: 11px;
+}
+
+.chart-value {
+  fill: #334155;
+  font-family: Inter, system-ui, sans-serif;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.chart-donut-total {
+  fill: #152238;
+  font-family: Inter, system-ui, sans-serif;
+  font-size: 28px;
+  font-weight: 800;
+}
+
+.admin-chart-legend {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .75rem 1.25rem;
+  margin: .75rem 0 0 1rem;
+}
+
+.admin-chart-legend-item {
+  align-items: center;
+  color: #475569;
+  display: inline-flex;
+  font-size: .85rem;
+  gap: .45rem;
+}
+
+.admin-chart-legend-item i {
+  background: var(--legend-color);
+  border-radius: 50%;
+  height: .65rem;
+  width: .65rem;
+}
+
+.admin-message-card {
+  max-width: 900px;
+  overflow-wrap: anywhere;
+  width: 100%;
+}
+
+.admin-message-card h2 {
+  margin: 0;
+}
+
+.admin-message-card p {
+  white-space: pre-wrap;
+}
+
+@media (max-width: 640px) {
+  .page {
+    padding: 1.25rem .75rem 2rem;
+  }
+
+  .form-card {
+    box-sizing: border-box;
+    padding: 1.25rem;
+  }
+
+  .admin-list-header {
+    align-items: stretch;
+    flex-direction: column;
+  }
+
+  .admin-list-header h2 {
+    white-space: normal;
+  }
+
+  .admin-chart {
+    padding: .9rem;
+  }
+}
